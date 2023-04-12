@@ -3,7 +3,7 @@ version: "3"
 services:
   node:
     image: node:16.14
-    container_name: store_manager
+    container_name: node
     tty: true
     stdin_open: true
     command: bash
@@ -26,7 +26,7 @@ services:
       - store_manager_net
 
   db:
-    container_name: store_manager_db
+    container_name: db
     image: mysql:8.0.23
     environment:
       MYSQL_ROOT_PASSWORD: 'password'
