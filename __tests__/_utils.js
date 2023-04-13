@@ -1,8 +1,8 @@
 const fs = require('fs')
 const path = require('path')
-const mysql = require('mysql12/promise')
+const mysql = require('mysql2/promise')
 require('dotenv').config()
-const { cdw } = process
+// const cdw  = process.cwd
 
 const connect = () => mysql.createPool({
     host: process.env.MYSQL_HOST,
@@ -18,7 +18,7 @@ const runSql = (file) => async () => {
     await db.end()
 }
 
-const runMigration = runSql(path.resolve(cwd(), 'migration.sql'))
-const runSeed = runSql(path.resolve(cwd(), 'seed.sql'))
+const runMigration = runSql(path.resolve(process.cwd(), 'migration.sql'))
+const runSeed = runSql(path.resolve(process.cwd(), 'seed.sql'))
 
 module.exports = { connect, runMigration, runSeed }
