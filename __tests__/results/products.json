@@ -4,8 +4,12 @@
     {"id":2,"name":"Traje de encolhimento"},
     {"id":3,"name":"Escudo do Capitão América"}
   ],
-    "create":{
+    "create": {
       "created": {"name": "Product1"},
       "response": {"id": 4, "name": "Product1"}
-    }
+    },
+    "invalid": {
+      "body": {},
+      "size": {"name": "Prod"}
+    }  
   }
