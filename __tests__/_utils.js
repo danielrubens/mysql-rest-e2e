@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const mysql = require('mysql2/promise')
 require('dotenv').config()
-// const cdw  = process.cwd
+
 
 const connect = () => mysql.createPool({
     host: process.env.MYSQL_HOST,
