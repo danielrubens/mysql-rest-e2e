@@ -1,11 +1,11 @@
 const { runSeed, connect } = require('./_utils');
 const frisby = require("frisby");
-const allProducts  = require('./results/products').getAll;
 require("dotenv").config();
-
+const products = require('./results/products.json')
 
 describe("01 - Create endpoint to list all products", () => {
-
+  
+  const allProducts = products['getAll']
   const url = `http://${process.env.HOST}:${process.env.PORT}`;
   beforeAll(async () => await runSeed());
   afterAll(async () => await connect().end());
