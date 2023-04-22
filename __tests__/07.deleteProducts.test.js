@@ -1,6 +1,5 @@
 const { runSeed, connect } = require('./_utils')
 const frisby = require("frisby")
-const products = require('./results/products.json')
 require("dotenv").config()
 
 describe("Endpoint to delete products", async () => {
@@ -10,7 +9,7 @@ describe("Endpoint to delete products", async () => {
     afterAll(async () => await connect().end())
 
     it("Can't delete an unexistent product", async () => {
-        const { status, json } = await frisby.delete(`${url}/products/100`, products["update"])
+        const { status, json } = await frisby.delete(`${url}/products/100`)
 
         expect(status).toBe(404)
         expect(json.message).toEqual("Product not found")
