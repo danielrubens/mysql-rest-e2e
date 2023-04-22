@@ -12,5 +12,6 @@
       "body": {},
       "size": {"name": "Prod"}
     },
-    "update": {"name": "Machado do Thor Stormbreaker"}  
+    "update": {"name": "Machado do Thor Stormbreaker"},
+    "search": [{"id": 1, "name": "Martelo de Thor"}]  
   }
