@@ -11,5 +11,6 @@
     "invalid": {
       "body": {},
       "size": {"name": "Prod"}
-    }  
+    },
+    "update": {"name": "Machado do Thor Stormbreaker"}  
   }
