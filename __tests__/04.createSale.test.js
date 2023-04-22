@@ -27,14 +27,14 @@ describe('Endpoint to create and validate sales', () => {
         expect(json.message).toEqual("\"quantity\" must be greater than or equal to 1")
     })
 
-    it("Can't create a sale of an unexistent productId", async () => {
-        const { status, json } = await frisby.post(`${url}/sales`, invalid["unexistentProductId"])
+    it("Can't create a sale of an nonexistent productId", async () => {
+        const { status, json } = await frisby.post(`${url}/sales`, invalid["nonexistentProductId"])
         expect(status).toBe(404);
         expect(json.message).toEqual("Product not found")
     })
 
-    it("Can't create a sale of an unexistent productId", async () => {
-        const { status, json } = await frisby.post(`${url}/sales`, invalid["unexistentProductId2"])
+    it("Can't create a sale of an nonexistent productId", async () => {
+        const { status, json } = await frisby.post(`${url}/sales`, invalid["nonexistentProductId2"])
         expect(status).toBe(404);
         expect(json.message).toEqual("Product not found")
     })

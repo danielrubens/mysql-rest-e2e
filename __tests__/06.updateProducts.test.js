@@ -23,14 +23,14 @@ describe("Endpoint to update products", () => {
         expect(json.message).toEqual("\"name\" length must be at least 5 characters long")
     })
 
-    it("Can't update an unexistent product", async () => {
+    it("Can't update an nonexistent product", async () => {
         const { status, json } = await frisby.put(`${url}/products/100`, products["update"])
 
         expect(status).toBe(404)
         expect(json.message).toEqual("Product not found")
     })
 
-    it("Updates an existent product with the right body", async () => {
+    it("Updates an existing  product with the right body", async () => {
         const { status, json } = await frisby.put(`${url}/products/1`, products["update"])
 
         expect(status).toBe(200)

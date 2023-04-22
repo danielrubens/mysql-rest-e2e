@@ -3,8 +3,8 @@
     {
         "noProductId": [{"quantity": 1}],
         "noQuantity": [{"productId": 1}],
-        "unexistentProductId": [{"productId": 9999, "quantity": 1}],
-        "unexistentProductId2": [{"productId": 1, "quantity": 1}, {"productId": 9999, "quantity": 5}],
+        "nonexistentProductId": [{"productId": 9999, "quantity": 1}],
+        "nonexistentProductId2": [{"productId": 1, "quantity": 1}, {"productId": 9999, "quantity": 5}],
         "zeroQuantity": [{"productId": 1, "quantity": 0}],
         "nonNegative": [{"productId": 1, "quantity": -1}],
         "otherProductId": [{"productId": 1, "quantity": 1}, {"productId": 3, "quantity": 5}]

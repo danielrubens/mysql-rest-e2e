@@ -27,7 +27,7 @@ describe("01 - Create endpoint to list all products", () => {
     expect(json).toEqual(allProducts);
   });
 
-  it("Impossible to list an unexistent product", async () => {
+  it("Impossible to list an nonexistent product", async () => {
     const { status, json } = await getRoute('/products/999');
 
     expect(status).toBe(404);
